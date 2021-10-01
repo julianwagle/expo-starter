@@ -5,11 +5,21 @@
  * and a "main" flow which the user will use once logged in.
  */
 import React from "react"
-import { useColorScheme } from "react-native"
-import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
+// import { useColorScheme } from "react-native"
+// import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
+import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen } from "../screens"
+import { WelcomeScreen, DemoListScreen } from "../screens"
+import {
+  SignUpScreen,
+  LogInScreen,
+  ProfileScreen,
+  EditProfileScreen,
+  ResetPasswordScreen,
+  ChangePasswordScreen
+} from "../screens/account"
 import { navigationRef } from "./navigation-utilities"
+import { useColorModeValue, useToken } from 'native-base';
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -25,8 +35,13 @@ import { navigationRef } from "./navigation-utilities"
  */
 export type NavigatorParamList = {
   welcome: undefined
-  demo: undefined
   demoList: undefined
+  signUp: undefined
+  logIn: undefined
+  profile: undefined
+  editProfile: undefined
+  resetPassword: undefined
+  changePassword: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -41,20 +56,33 @@ const AppStack = () => {
       initialRouteName="welcome"
     >
       <Stack.Screen name="welcome" component={WelcomeScreen} />
-      <Stack.Screen name="demo" component={DemoScreen} />
       <Stack.Screen name="demoList" component={DemoListScreen} />
+      <Stack.Screen name="signUp" component={SignUpScreen} />
+      <Stack.Screen name="logIn" component={LogInScreen} />
+      <Stack.Screen name="profile" component={ProfileScreen} />
+      <Stack.Screen name="editProfile" component={EditProfileScreen} />
+      <Stack.Screen name="resetPassword" component={ResetPasswordScreen} />
+      <Stack.Screen name="changePassword" component={ChangePasswordScreen} />
     </Stack.Navigator>
   )
 }
 
-interface NavigationProps extends Partial<React.ComponentProps<typeof NavigationContainer>> {}
+interface NavigationProps extends Partial<React.ComponentProps<typeof NavigationContainer>> { }
 
 export const AppNavigator = (props: NavigationProps) => {
-  const colorScheme = useColorScheme()
+  // const colorScheme = useColorScheme()
+  const [lightBg, darkBg] = useToken(
+    'colors',
+    ['coolGray.50', 'blueGray.900'],
+    'blueGray.900',
+  );
+  const bgColor = useColorModeValue(lightBg, darkBg);
   return (
+
     <NavigationContainer
       ref={navigationRef}
-      theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+      // theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+      theme={{ colors: { background: bgColor }, }}
       {...props}
     >
       <AppStack />
