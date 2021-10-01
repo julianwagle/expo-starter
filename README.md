@@ -1,3 +1,6 @@
+This is an ignite expo app that I'm adding a bunch to. For now, Ill just keep the readme file the same as the ignite app:
+
+
 # Welcome to your new ignited app!
 
 [![CircleCI](https://circleci.com/gh/infinitered/ignite.svg?style=svg)](https://circleci.com/gh/infinitered/ignite)
