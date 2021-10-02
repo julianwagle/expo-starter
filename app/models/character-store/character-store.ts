@@ -35,7 +35,6 @@ export const CharacterStoreModel = types
           character['statusColor'] = 'info'
         }
       }
-      console.log(characterSnapshots);
       self.characters.replace(characterSnapshots)
     },
   }))
