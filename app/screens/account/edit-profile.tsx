@@ -26,7 +26,7 @@ export const EditProfileScreen: FC<StackScreenProps<NavigatorParamList, "editPro
 
         const goBack = () => navigation.goBack()
         const profileScreen = () => navigation.navigate("profile")
-        const listScreen = () => navigation.navigate("demoList")
+        const listScreen = () => navigation.navigate("list")
         const changePasswordScreen = () => navigation.navigate("changePassword")
 
         const [show, setShow] = React.useState(false);
@@ -42,6 +42,7 @@ export const EditProfileScreen: FC<StackScreenProps<NavigatorParamList, "editPro
                 onLeftPress={goBack}
                 rightIcon='true'
                 onRightPress={profileScreen}
+                preset="scroll"
             >
 
                 <LayoutAccount

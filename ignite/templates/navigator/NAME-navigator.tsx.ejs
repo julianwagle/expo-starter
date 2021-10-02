@@ -1,18 +1,18 @@
 import React from "react"
 import { createStackNavigator } from "@react-navigation/stack"
 import {
-  DemoListScreen
+  ListScreen
 } from "../../screens"
 
 export type <%= props.pascalCaseName %>ParamList = {
-  demoList: undefined
+  list: undefined
 }
 
 const Stack = createStackNavigator<<%= props.pascalCaseName %>ParamList>()
 export const <%= props.pascalCaseName %> = () => {
   return (
     <Stack.Navigator screenOptions={{ cardStyle: { backgroundColor: "transparent" }, headerShown: false, }}>
-      <Stack.Screen name="demoList" component={DemoListScreen} />
+      <Stack.Screen name="list" component={ListScreen} />
     </Stack.Navigator>
   )
 }

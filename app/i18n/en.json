@@ -12,8 +12,8 @@
     "readyForLaunch": "Ready for launch.",
     "continue": "CONTINUE"
   },
-  "demoListScreen": {
-    "title": "Demo List"
+  "listScreen": {
+    "title": "List"
   },
   "errorScreen": {
     "title": "Something went wrong!",

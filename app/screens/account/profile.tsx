@@ -23,7 +23,7 @@ export const ProfileScreen: FC<StackScreenProps<NavigatorParamList, "profile">> 
 
         const goBack = () => navigation.goBack()
         const profileScreen = () => navigation.navigate("profile")
-        const listScreen = () => navigation.navigate("demoList")
+        const listScreen = () => navigation.navigate("list")
         const welcomeScreen = () => navigation.navigate("welcome")
         const editProfileScreen = () => navigation.navigate("editProfile")
 
@@ -38,6 +38,8 @@ export const ProfileScreen: FC<StackScreenProps<NavigatorParamList, "profile">> 
                 onLeftPress={goBack}
                 rightIcon='true'
                 onRightPress={profileScreen}
+                preset="scroll"
+
             >
 
                 <LayoutAccount

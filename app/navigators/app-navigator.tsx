@@ -9,7 +9,10 @@ import React from "react"
 // import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoListScreen } from "../screens"
+import {
+  WelcomeScreen,
+  ListScreen
+} from "../screens/main"
 import {
   SignUpScreen,
   LogInScreen,
@@ -18,6 +21,11 @@ import {
   ResetPasswordScreen,
   ChangePasswordScreen
 } from "../screens/account"
+import {
+  TermsScreen,
+  PrivacyScreen,
+  CookiesScreen
+} from "../screens/other"
 import { navigationRef } from "./navigation-utilities"
 import { useColorModeValue, useToken } from 'native-base';
 
@@ -34,14 +42,20 @@ import { useColorModeValue, useToken } from 'native-base';
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
 export type NavigatorParamList = {
+  // Main params
   welcome: undefined
-  demoList: undefined
+  list: undefined
+  // Account params
   signUp: undefined
   logIn: undefined
   profile: undefined
   editProfile: undefined
   resetPassword: undefined
   changePassword: undefined
+  // Other params
+  terms: undefined
+  privacy: undefined
+  cookies: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -55,14 +69,21 @@ const AppStack = () => {
       }}
       initialRouteName="welcome"
     >
+      {/* Main screens */}
       <Stack.Screen name="welcome" component={WelcomeScreen} />
-      <Stack.Screen name="demoList" component={DemoListScreen} />
+      <Stack.Screen name="list" component={ListScreen} />
+      {/* Account screens */}
       <Stack.Screen name="signUp" component={SignUpScreen} />
       <Stack.Screen name="logIn" component={LogInScreen} />
       <Stack.Screen name="profile" component={ProfileScreen} />
       <Stack.Screen name="editProfile" component={EditProfileScreen} />
       <Stack.Screen name="resetPassword" component={ResetPasswordScreen} />
       <Stack.Screen name="changePassword" component={ChangePasswordScreen} />
+      {/* Other screens */}
+      <Stack.Screen name="terms" component={TermsScreen} />
+      <Stack.Screen name="privacy" component={PrivacyScreen} />
+      <Stack.Screen name="cookies" component={CookiesScreen} />
+
     </Stack.Navigator>
   )
 }

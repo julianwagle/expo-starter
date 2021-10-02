@@ -22,7 +22,12 @@ export const SignUpScreen: FC<StackScreenProps<NavigatorParamList, "signUp">> = 
 
     const goBack = () => navigation.goBack()
     const profileScreen = () => navigation.navigate("profile")
-    const listScreen = () => navigation.navigate("demoList")
+    const listScreen = () => navigation.navigate("list")
+
+    const termsScreen = () => navigation.navigate("terms")
+    const privacyScreen = () => navigation.navigate("privacy")
+    const cookiesScreen = () => navigation.navigate("cookies")
+
     const logInScreen = () => navigation.navigate("logIn")
 
     const [show, setShow] = React.useState(false);
@@ -37,6 +42,8 @@ export const SignUpScreen: FC<StackScreenProps<NavigatorParamList, "signUp">> = 
         onLeftPress={goBack}
         rightIcon='true'
         onRightPress={profileScreen}
+        preset="scroll"
+
       >
 
         <LayoutAccount
@@ -110,7 +117,7 @@ export const SignUpScreen: FC<StackScreenProps<NavigatorParamList, "signUp">> = 
           <FormControl >
             <VStack space={8} alignItems="center">
               <Text alignSelf={{ base: 'center', md: 'flex-start' }}>
-                By signing up, you agree to the <Text underline onPress={listScreen}>Terms of Service</Text>.
+                By signing up, you agree to the <Text underline onPress={termsScreen}>terms of use</Text>, <Text underline onPress={privacyScreen}>privacy policy</Text> and <Text underline onPress={cookiesScreen}>cookie policy</Text>.
               </Text>
             </VStack>
           </FormControl>
@@ -119,7 +126,7 @@ export const SignUpScreen: FC<StackScreenProps<NavigatorParamList, "signUp">> = 
 
           <FormControl >
             <Button
-              testID="demo-list-screen-button"
+              testID="sign-up-button"
               size="md"
               height="48px"
               width="200px"

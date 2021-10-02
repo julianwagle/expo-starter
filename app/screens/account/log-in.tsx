@@ -21,7 +21,7 @@ export const LogInScreen: FC<StackScreenProps<NavigatorParamList, "logIn">> = ob
 
     const goBack = () => navigation.goBack()
     const profileScreen = () => navigation.navigate("profile")
-    const listScreen = () => navigation.navigate("demoList")
+    const listScreen = () => navigation.navigate("list")
     const resetPasswordScreen = () => navigation.navigate("resetPassword")
 
     const [show, setShow] = React.useState(false);
@@ -37,6 +37,8 @@ export const LogInScreen: FC<StackScreenProps<NavigatorParamList, "logIn">> = ob
         onLeftPress={goBack}
         rightIcon='true'
         onRightPress={profileScreen}
+        preset="scroll"
+
       >
         <LayoutAccount
           headerTx='Log in'

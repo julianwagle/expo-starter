@@ -19,7 +19,7 @@ export const ChangePasswordScreen: FC<StackScreenProps<NavigatorParamList, "chan
 
     const goBack = () => navigation.goBack()
     const profileScreen = () => navigation.navigate("profile")
-    const listScreen = () => navigation.navigate("demoList")
+    const listScreen = () => navigation.navigate("list")
 
     const [show, setShow] = React.useState(false);
     const handleClick = () => setShow(!show);
@@ -32,6 +32,7 @@ export const ChangePasswordScreen: FC<StackScreenProps<NavigatorParamList, "chan
         onLeftPress={goBack}
         rightIcon='true'
         onRightPress={profileScreen}
+        preset="scroll"
       >
 
         <LayoutAccount
