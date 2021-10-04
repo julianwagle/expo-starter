@@ -1,8 +1,9 @@
-import React, { FC } from "react"
+import React, { useEffect, FC } from "react"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
 import { NavigatorParamList } from "../../navigators"
 import { LayoutMain } from '../../layouts';
+import { useStores } from "../../models"
 
 import {
   HStack,
@@ -16,12 +17,34 @@ import {
 
 export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = observer(
   ({ route, navigation }) => {
-    const item: any = route.params || new Map();
-    const name: string = item.name || 'Undefined name';
-
     const goBack = () => navigation.goBack()
     const profileScreen = () => navigation.navigate("profile")
     const listScreen = () => navigation.navigate("list")
+
+    const passedParams: any = route.params || new Map();
+    const passedName: string = passedParams.name || 'Undefined name';
+
+    const { characterStore } = useStores()
+    const { characters } = characterStore
+
+    function getItem(characters: any) {
+      for (let i = 0; i < characters.length; i++) {
+        var characterName = characters[i]['name'];
+        if (characterName == passedName) {
+          const item: any = characters[i] || new Map();
+          return item;
+        }
+      }
+    }
+    const item = getItem(characters);
+
+    useEffect(() => {
+      async function fetchData() {
+        await characterStore.getCharacters()
+      }
+
+      fetchData()
+    }, [])
 
     return (
       <LayoutMain
@@ -36,9 +59,8 @@ export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = 
 
         <Box alignSelf={{ base: 'center', md: 'flex-start' }}>
 
-
           <Heading mb={4} mt={10}>
-            Heading One
+            {item.name}
           </Heading>
 
           <Text fontSize="xl" mb={4} >
@@ -62,7 +84,7 @@ export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = 
             h={64}
             rounded="xl"
             source={{
-              uri: 'https://wallpaperaccess.com/full/317501.jpg',
+              uri: item.image,
             }}
             alt="NativeBase Card"
           />
