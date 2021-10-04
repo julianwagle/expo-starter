@@ -46,7 +46,7 @@ export const ListScreen: FC<StackScreenProps<NavigatorParamList, "list">> = obse
         onLeftPress={goBack}
         rightIcon='true'
         onRightPress={profileScreen}
-        preset="fixed"
+        preset="scroll"
 
       >
 

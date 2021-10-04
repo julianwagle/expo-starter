@@ -17,7 +17,9 @@ export const LayoutMain = ({
     preset
 }: any) => {
 
-    const FULL: ViewStyle = { flex: 1 }
+    const FULL: ViewStyle = {
+        flex: 1,
+    }
 
     return (
 
@@ -51,11 +53,11 @@ export const LayoutMain = ({
 
                 </Box>
 
+                <ColorToggler />
+
+                <LogoBackdrop />
+
             </Screen>
-
-            <ColorToggler />
-
-            <LogoBackdrop />
 
         </View>
 

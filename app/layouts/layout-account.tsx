@@ -53,12 +53,15 @@ export const LayoutAccount = ({
                         space={4}
                         px={4}
                     >
+
                         {children}
 
                     </Stack>
 
                 </Flex>
+
             </VStack>
+
         </Box>
 
     );
