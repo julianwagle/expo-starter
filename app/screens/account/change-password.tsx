@@ -26,7 +26,7 @@ export const ChangePasswordScreen: FC<StackScreenProps<NavigatorParamList, "chan
 
     return (
       <LayoutMain
-        headerTx="welcomeScreen.poweredBy"
+        headerTx="common.companyNameCaps"
         onCenterPress={listScreen}
         leftIcon='true'
         onLeftPress={goBack}
@@ -36,7 +36,7 @@ export const ChangePasswordScreen: FC<StackScreenProps<NavigatorParamList, "chan
       >
 
         <LayoutAccount
-          headerTx='Change password'
+          headerTx='changePasswordScreen.title'
         >
 
           <FormControl isRequired >

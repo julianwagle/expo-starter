@@ -39,6 +39,7 @@ const HEADER_TITLE: TextStyle = {
 const TITLE_WRAPPER: TextStyle = {
   ...TEXT,
   textAlign: "center",
+  marginBottom: 8
 }
 const TITLE: TextStyle = {
   ...TEXT,
@@ -46,12 +47,6 @@ const TITLE: TextStyle = {
   fontSize: 28,
   lineHeight: 38,
   textAlign: "center",
-}
-const ALMOST: TextStyle = {
-  ...TEXT,
-  ...BOLD,
-  fontSize: 26,
-  fontStyle: "italic",
 }
 
 
@@ -72,20 +67,18 @@ const FOOTER_CONTENT: ViewStyle = {
   paddingHorizontal: spacing[4],
 }
 
-export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> = observer(
+export const LandingScreen: FC<StackScreenProps<NavigatorParamList, "landing">> = observer(
   ({ navigation }) => {
     const nextScreen = () => navigation.navigate("signUp")
 
     return (
       <View style={FULL}>
         <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
-          <Header headerTx="welcomeScreen.poweredBy" style={HEADER} titleStyle={HEADER_TITLE} />
+          <Header headerTx="common.companyNameCaps" style={HEADER} titleStyle={HEADER_TITLE} />
           <Text style={TITLE_WRAPPER}>
-            <Text style={TITLE} text="Your new app, " />
-            <Text style={ALMOST} text="almost" />
-            <Text style={TITLE} text="!" />
+            <Text style={TITLE} preset="header" tx="common.companyMotoShort" />
           </Text>
-          <Text style={TITLE} preset="header" tx="welcomeScreen.readyForLaunch" />
+          <Text style={TITLE} preset="header" tx="common.companyMotoMedium" />
         </Screen>
         <SafeAreaView>
           <View style={FOOTER_CONTENT}>
@@ -99,7 +92,7 @@ export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> 
                 testID="next-screen-button"
                 style={CONTINUE}
                 textStyle={CONTINUE_TEXT}
-                tx="welcomeScreen.continue"
+                tx="common.continue"
                 onPress={nextScreen}
               />
             </Box>

@@ -36,7 +36,7 @@ export const SignUpScreen: FC<StackScreenProps<NavigatorParamList, "signUp">> = 
     return (
 
       <LayoutMain
-        headerTx="welcomeScreen.poweredBy"
+        headerTx="common.companyNameCaps"
         onCenterPress={listScreen}
         leftIcon='true'
         onLeftPress={goBack}
@@ -47,7 +47,7 @@ export const SignUpScreen: FC<StackScreenProps<NavigatorParamList, "signUp">> = 
       >
 
         <LayoutAccount
-          headerTx='Sign Up'
+          headerTx='signUpScreen.title'
         >
 
           <FormControl isRequired >

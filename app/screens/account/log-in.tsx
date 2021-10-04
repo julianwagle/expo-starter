@@ -31,7 +31,7 @@ export const LogInScreen: FC<StackScreenProps<NavigatorParamList, "logIn">> = ob
     return (
 
       <LayoutMain
-        headerTx="welcomeScreen.poweredBy"
+        headerTx="common.companyNameCaps"
         onCenterPress={listScreen}
         leftIcon='true'
         onLeftPress={goBack}
@@ -41,7 +41,7 @@ export const LogInScreen: FC<StackScreenProps<NavigatorParamList, "logIn">> = ob
 
       >
         <LayoutAccount
-          headerTx='Log in'
+          headerTx='logInScreen.title'
         >
 
           <FormControl isRequired >

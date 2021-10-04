@@ -20,7 +20,7 @@ export const PrivacyScreen: FC<StackScreenProps<NavigatorParamList, "privacy">> 
 
         return (
             <LayoutMain
-                headerTx="welcomeScreen.poweredBy"
+                headerTx="common.companyNameCaps"
                 onCenterPress={listScreen}
                 leftIcon='true'
                 onLeftPress={goBack}
@@ -31,7 +31,7 @@ export const PrivacyScreen: FC<StackScreenProps<NavigatorParamList, "privacy">> 
             >
 
                 <LayoutAccount
-                    headerTx='Privacy policy'
+                    headerTx='privacyScreen.title'
                 >
 
                     <Box alignSelf={{ base: 'center', md: 'flex-start' }}>

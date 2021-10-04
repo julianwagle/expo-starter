@@ -20,7 +20,7 @@ export const CookiesScreen: FC<StackScreenProps<NavigatorParamList, "cookies">> 
 
         return (
             <LayoutMain
-                headerTx="welcomeScreen.poweredBy"
+                headerTx="common.companyNameCaps"
                 onCenterPress={listScreen}
                 leftIcon='true'
                 onLeftPress={goBack}
@@ -31,7 +31,7 @@ export const CookiesScreen: FC<StackScreenProps<NavigatorParamList, "cookies">> 
             >
 
                 <LayoutAccount
-                    headerTx='Cookie policy'
+                    headerTx='cookiesScreen.title'
                 >
 
                     <Box alignSelf={{ base: 'center', md: 'flex-start' }}>

@@ -36,7 +36,7 @@ export const EditProfileScreen: FC<StackScreenProps<NavigatorParamList, "editPro
         return (
 
             <LayoutMain
-                headerTx="welcomeScreen.poweredBy"
+                headerTx="common.companyNameCaps"
                 onCenterPress={listScreen}
                 leftIcon='true'
                 onLeftPress={goBack}
@@ -46,7 +46,7 @@ export const EditProfileScreen: FC<StackScreenProps<NavigatorParamList, "editPro
             >
 
                 <LayoutAccount
-                    headerTx='Edit profile'
+                    headerTx='editProfileScreen.title'
                 >
                     <Pressable
                         onPress={() => {

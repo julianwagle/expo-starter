@@ -24,7 +24,7 @@ export const ProfileScreen: FC<StackScreenProps<NavigatorParamList, "profile">> 
         const goBack = () => navigation.goBack()
         const profileScreen = () => navigation.navigate("profile")
         const listScreen = () => navigation.navigate("list")
-        const welcomeScreen = () => navigation.navigate("welcome")
+        const landingScreen = () => navigation.navigate("landing")
         const editProfileScreen = () => navigation.navigate("editProfile")
 
         const [show, setShow] = React.useState(false);
@@ -32,7 +32,7 @@ export const ProfileScreen: FC<StackScreenProps<NavigatorParamList, "profile">> 
 
         return (
             <LayoutMain
-                headerTx="welcomeScreen.poweredBy"
+                headerTx="common.companyNameCaps"
                 onCenterPress={listScreen}
                 leftIcon='true'
                 onLeftPress={goBack}
@@ -43,7 +43,7 @@ export const ProfileScreen: FC<StackScreenProps<NavigatorParamList, "profile">> 
             >
 
                 <LayoutAccount
-                    headerTx='Profile'
+                    headerTx='profileScreen.title'
                 >
                     <Avatar
                         size={'xl'}
@@ -130,7 +130,7 @@ export const ProfileScreen: FC<StackScreenProps<NavigatorParamList, "profile">> 
                                 mx={{ base: 'auto', md: 0 }}
                                 colorScheme="danger"
                                 _text={{ color: 'white' }}
-                                onPress={welcomeScreen}
+                                onPress={landingScreen}
                             >
                                 Log out
                             </Button>

@@ -32,7 +32,7 @@ export const ResetPasswordScreen: FC<StackScreenProps<NavigatorParamList, "reset
 
     return (
       <LayoutMain
-        headerTx="welcomeScreen.poweredBy"
+        headerTx="common.companyNameCaps"
         onCenterPress={listScreen}
         leftIcon='true'
         onLeftPress={goBack}
@@ -43,7 +43,7 @@ export const ResetPasswordScreen: FC<StackScreenProps<NavigatorParamList, "reset
       >
 
         <LayoutAccount
-          headerTx='Reset password'
+          headerTx='resetPasswordScreen.title'
         >
 
           <FormControl isRequired >

@@ -4,7 +4,7 @@ const { exec } = require("child_process")
 // Use this array for keys that for whatever reason aren't greppable so they
 // don't hold your test suite hostage by always failing.
 const EXCEPTIONS = [
-  // "welcomeScreen.readyForLaunch",
+  // "common.companyMotoShort",
 ]
 
 function iterate(obj, stack, array) {

@@ -9,6 +9,7 @@ import {
     useColorMode,
     Divider,
 } from 'native-base';
+import { translate } from "../i18n/"
 
 export const LayoutAccount = ({
     headerTx,
@@ -16,7 +17,7 @@ export const LayoutAccount = ({
 }: any) => {
 
     const { colorMode, toggleColorMode } = useColorMode();
-
+    const headerText = (headerTx && translate(headerTx))
     return (
 
         <Box
@@ -34,7 +35,7 @@ export const LayoutAccount = ({
                     p={4}
                     color={colorMode == 'dark' ? 'gray.100' : 'trueGray.700'}
                 >
-                    {headerTx}
+                    {headerText}
                 </Heading>
 
                 <Divider

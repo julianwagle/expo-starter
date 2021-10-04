@@ -20,7 +20,7 @@ export const TermsScreen: FC<StackScreenProps<NavigatorParamList, "terms">> = ob
 
         return (
             <LayoutMain
-                headerTx="welcomeScreen.poweredBy"
+                headerTx="common.companyNameCaps"
                 onCenterPress={listScreen}
                 leftIcon='true'
                 onLeftPress={goBack}
@@ -31,7 +31,7 @@ export const TermsScreen: FC<StackScreenProps<NavigatorParamList, "terms">> = ob
             >
 
                 <LayoutAccount
-                    headerTx='Terms of use'
+                    headerTx='termsScreen.title'
                 >
 
                     <Box alignSelf={{ base: 'center', md: 'flex-start' }}>

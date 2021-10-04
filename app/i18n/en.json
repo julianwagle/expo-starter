@@ -1,19 +1,84 @@
 {
   "common": {
+    "companyName": "Ignition",
+    "companyNameCaps": "IGNITION",
+    "companyNameOfficial": "Ignition, LLC",
+    "companyMotoShort": "Build Faster. Build Better.",
+    "companyMotoMedium": "Get up and running faster, with Ignition.",
+    "companyMotoLong": "Quickly launch your product across multiple platforms with Igniton.",
+    "yes": "Yes",
+    "no": "No",
     "ok": "OK!",
+    "letsGo": "Let's Go!",
+    "getStarted": "Get Started",
+    "continue": "Continue",
     "cancel": "Cancel",
-    "back": "Back"
+    "back": "Back",
+    "home": "Home"
   },
   "errors": {
-    "invalidEmail": "Invalid email address."
+    "invalidEmail": "Invalid email address.",
+    "invalidPhone": "Invalid phone number.",
+    "invalidUsername": "Invalid username.",
+    "invalidPassword": "Invalid password.",
+    "invalidPin": "Invalid pin."
   },
-  "welcomeScreen": {
-    "poweredBy": "IGNITE",
-    "readyForLaunch": "Ready for launch.",
-    "continue": "CONTINUE"
+  "landingScreen": {
+    "title": "Landing Screen"
+  },
+  "aboutScreen": {
+    "title": "About Us"
+  },
+  "contactScreen": {
+    "title": "Contact Us"
+  },
+  "termsScreen": {
+    "title": "Terms and Conditions of Use"
+  },
+  "privacyScreen": {
+    "title": "Privacy Policy"
+  },
+  "cookiesScreen": {
+    "title": "Cookies Policy"
+  },
+  "pricingScreen": {
+    "title": "Pricing"
+  },
+  "paymentScreen": {
+    "title": "Payment"
+  },
+  "signUpScreen": {
+    "title": "Sign Up"
+  },
+  "logInScreen": {
+    "title": "Log In"
+  },
+  "profileScreen": {
+    "title": "Profile"
+  },
+  "editProfileScreen": {
+    "title": "Edit Profile"
+  },
+  "resetPasswordScreen": {
+    "title": "Reset Password"
+  },
+  "changePasswordScreen": {
+    "title": "Change Password"
   },
   "listScreen": {
     "title": "List"
+  },
+  "masonScreen": {
+    "title": "Mason"
+  },
+  "detailScreen": {
+    "title": "Detail"
+  },
+  "createScreen": {
+    "title": "Create"
+  },
+  "editScreen": {
+    "title": "Edit"
   },
   "errorScreen": {
     "title": "Something went wrong!",

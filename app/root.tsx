@@ -1,5 +1,5 @@
 /**
- * Welcome to the main entry point of the app. In this file, we'll
+ * Landing to the main entry point of the app. In this file, we'll
  * be kicking off our app.
  *
  * Most of this file is boilerplate and you shouldn't need to modify
