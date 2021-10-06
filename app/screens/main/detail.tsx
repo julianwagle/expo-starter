@@ -1,11 +1,11 @@
-import React, { useEffect, FC } from "react"
-import { FlatList, ViewStyle } from "react-native"
+import React, { useEffect, FC, useRef } from "react"
+import { ScrollView } from 'react-native';
+import { useScrollToTop } from '@react-navigation/native';
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
 import { NavigatorParamList } from "../../navigators"
 import { LayoutMain } from '../../layouts'
 import { useStores } from "../../models"
-import { spacing } from "../../theme"
 import { getRange } from '../../utils/range'
 import {
   HStack,
@@ -16,19 +16,18 @@ import {
   Pressable,
   Text as NativeText,
   Stack,
-  useColorModeValue
 } from 'native-base';
-
 
 
 export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = observer(
   ({ route, navigation }) => {
+
     const goBack = () => navigation.goBack()
     const profileScreen = () => navigation.navigate("profile")
     const listScreen = () => navigation.navigate("list")
 
     const passedParams: any = route.params || new Map();
-    const passedName: string = passedParams.name || 'Undefined name';
+    var passedName: string = passedParams.name || 'Undefined name';
 
     const { characterStore } = useStores()
     const { characters } = characterStore
@@ -77,8 +76,11 @@ export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = 
 
           <Pressable
             flex={1}
-            onPress={() =>
-              navigation.navigate('detail', { name: String(character.name) })}
+            onPress={
+              () => {
+                navigation.navigate('detail', { name: String(character.name) });
+              }
+            }
           >
 
             <Box
@@ -93,6 +95,7 @@ export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = 
               <Box width={{ md: '30%' }} height={{ base: 32, md: '100%' }}>
 
                 <NativeImage
+                  key={character.image}
                   source={{ uri: character.image }}
                   height={'100%'}
                   width={'100%'}
@@ -149,7 +152,7 @@ export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = 
         preset="scroll"
       >
 
-        <Box alignSelf={{ base: 'center', md: 'flex-start' }}>
+        <Box alignSelf={{ base: 'center', md: 'flex-start' }} >
 
           <Heading mb={4} mt={10}>
             {item.name}
@@ -173,13 +176,15 @@ export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = 
 
 
           <NativeImage
+            key={item.image}
             h={64}
             rounded="xl"
             source={{
               uri: item.image,
             }}
-            alt="NativeBase Card"
+            alt={item.name}
           />
+
 
           <Heading mb={4} mt={10}>
             Heading Two
@@ -202,12 +207,13 @@ export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = 
           </NativeText>
 
           <NativeImage
+            key={item.name}
             h={64}
             rounded="xl"
             source={{
-              uri: 'https://wallpaperaccess.com/full/317501.jpg',
+              uri: item.image,
             }}
-            alt="NativeBase Card"
+            alt={item.name}
           />
 
           <Heading mb={4} mt={10}>
@@ -242,6 +248,7 @@ export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = 
 
 
         </Box>
+
 
       </LayoutMain>
 

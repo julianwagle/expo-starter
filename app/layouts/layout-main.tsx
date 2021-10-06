@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react"
+
 import { Box } from 'native-base';
 import { ColorToggler, LogoBackdrop } from "../components/constants"
 import { View, ViewStyle } from "react-native"
 import { Header, Screen } from "../components"
 import { color } from "../theme"
+
 
 export const LayoutMain = ({
     leftIcon,
@@ -28,6 +30,7 @@ export const LayoutMain = ({
             <Screen
                 preset={preset} // scroll or fixed
                 backgroundColor={color.transparent}
+
             >
 
                 <Box
