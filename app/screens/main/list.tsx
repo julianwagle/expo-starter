@@ -119,6 +119,8 @@ export const ListScreen: FC<StackScreenProps<NavigatorParamList, "list">> = obse
               </Box>
             </Pressable>
 
+
+
           )}
         />
 
