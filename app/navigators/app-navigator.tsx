@@ -12,6 +12,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import {
   LandingScreen,
   ListScreen,
+  MasonScreen,
   DetailScreen,
   LoadingScreen
 } from "../screens/main"
@@ -47,6 +48,7 @@ export type NavigatorParamList = {
   // Main params
   landing: undefined
   list: undefined
+  mason: undefined
   loading: undefined
   detail: undefined
   // Account params
@@ -76,6 +78,7 @@ const AppStack = () => {
       {/* Main screens */}
       <Stack.Screen name="landing" component={LandingScreen} />
       <Stack.Screen name="list" component={ListScreen} />
+      <Stack.Screen name="mason" component={MasonScreen} />
       <Stack.Screen name="loading" component={LoadingScreen} />
       <Stack.Screen name="detail" component={DetailScreen} />
       {/* Account screens */}

@@ -26,7 +26,8 @@ export const ListScreen: FC<StackScreenProps<NavigatorParamList, "list">> = obse
 
     const goBack = () => navigation.goBack()
     const profileScreen = () => navigation.navigate("profile")
-    const listScreen = () => navigation.navigate("list")
+    // const listScreen = () => navigation.navigate("list")
+    const masonScreen = () => navigation.navigate("mason")
 
     const { characterStore } = useStores()
     const { characters } = characterStore
@@ -42,7 +43,7 @@ export const ListScreen: FC<StackScreenProps<NavigatorParamList, "list">> = obse
     return (
       <LayoutMain
         headerTx="common.companyNameCaps"
-        onCenterPress={listScreen}
+        onCenterPress={masonScreen}
         leftIcon='true'
         onLeftPress={goBack}
         rightIcon='true'

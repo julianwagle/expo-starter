@@ -7,13 +7,9 @@ import { useStores } from "../../models"
 import { getRange } from '../../utils/range'
 import {
   HStack,
-  Box,
-  Badge,
   Heading,
   Image as NativeImage,
-  Pressable,
   Text as NativeText,
-  Stack,
 } from 'native-base';
 import { DetailMoreContent } from './detail-more-content'
 
