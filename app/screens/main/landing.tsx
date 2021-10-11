@@ -10,13 +10,13 @@ import {
 } from "../../components"
 import { color, spacing, typography } from "../../theme"
 import { NavigatorParamList } from "../../navigators"
-import { Box, } from 'native-base';
-
+import { Button as NativeButton, Stack, Box } from 'native-base';
 
 const FULL: ViewStyle = { flex: 1 }
 const CONTAINER: ViewStyle = {
   backgroundColor: color.transparent,
   paddingHorizontal: spacing[4],
+  paddingTop: spacing[4],
 }
 const TEXT: TextStyle = {
   color: color.palette.white,
@@ -55,12 +55,25 @@ const CONTINUE: ViewStyle = {
   paddingHorizontal: spacing[4],
   backgroundColor: color.palette.deepPurple,
 }
-const CONTINUE_TEXT: TextStyle = {
+const SMALL_SPACED_TEXT: TextStyle = {
   ...TEXT,
   ...BOLD,
   fontSize: 13,
   letterSpacing: 2,
+  textAlign: "center",
+
 }
+
+const MEDIUM_SPACED_TEXT: TextStyle = {
+  ...TEXT,
+  ...BOLD,
+  fontSize: 18,
+  letterSpacing: 2,
+  textAlign: "center",
+  paddingTop: spacing[4],
+
+}
+
 
 const FOOTER_CONTENT: ViewStyle = {
   paddingVertical: spacing[4],
@@ -73,13 +86,18 @@ export const LandingScreen: FC<StackScreenProps<NavigatorParamList, "landing">> 
 
     return (
       <View style={FULL}>
+        <Header headerTx="common.companyNameCaps" style={HEADER} titleStyle={HEADER_TITLE} />
+
         <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
-          <Header headerTx="common.companyNameCaps" style={HEADER} titleStyle={HEADER_TITLE} />
+          <Text style={SMALL_SPACED_TEXT} preset="header" tx="common.companyMotoShort" />
           <Text style={TITLE_WRAPPER}>
-            <Text style={TITLE} preset="header" tx="common.companyMotoShort" />
+            <Text style={TITLE} preset="header" tx="common.companyMotoMedium" />
           </Text>
-          <Text style={TITLE} preset="header" tx="common.companyMotoMedium" />
+          <Text style={MEDIUM_SPACED_TEXT} preset="header" tx="common.companyMotoLong" />
+
         </Screen>
+
+
         <SafeAreaView>
           <View style={FOOTER_CONTENT}>
             <Box
@@ -91,7 +109,7 @@ export const LandingScreen: FC<StackScreenProps<NavigatorParamList, "landing">> 
               <Button
                 testID="next-screen-button"
                 style={CONTINUE}
-                textStyle={CONTINUE_TEXT}
+                textStyle={SMALL_SPACED_TEXT}
                 tx="common.continue"
                 onPress={nextScreen}
               />

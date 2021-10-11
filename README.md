@@ -1,5 +1,7 @@
-This is an ignite expo app that I'm adding a bunch to. For now, Ill just keep the readme file the same as the ignite app:
 
+This is a 'batteries included' starter template for React native cross platform development with Expo. I've used mostly native-base components to create standard pages used in most modern applications to cut back on development time when starting any new project. 
+
+Below is the standard Read-Me for an Ignite app.
 
 # Welcome to your new ignited app!
 
