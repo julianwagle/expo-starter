@@ -10,12 +10,17 @@ import React from "react"
 import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import {
-  LandingScreen,
   ListScreen,
   MasonScreen,
   DetailScreen,
   LoadingScreen
 } from "../screens/main"
+import {
+  BlogListScreen,
+} from "../screens/blog"
+import {
+  LandingScreen,
+} from "../screens/funnel"
 import {
   SignUpScreen,
   LogInScreen,
@@ -45,12 +50,18 @@ import { useColorModeValue, useToken } from 'native-base';
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
 export type NavigatorParamList = {
-  // Main params
+  loading: undefined
+  // Funnel params
   landing: undefined
+  about: undefined
+  contact: undefined
+  // Main params
   list: undefined
   mason: undefined
-  loading: undefined
   detail: undefined
+  // Blog params
+  blogList: undefined
+  blogDetail: undefined
   // Account params
   signUp: undefined
   logIn: undefined
@@ -62,6 +73,11 @@ export type NavigatorParamList = {
   terms: undefined
   privacy: undefined
   cookies: undefined
+  // Payment params
+  payment: undefined
+  shipping: undefined
+  pricing: undefined
+
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -75,11 +91,14 @@ const AppStack = () => {
       }}
       initialRouteName="landing"
     >
-      {/* Main screens */}
+      <Stack.Screen name="loading" component={LoadingScreen} />
+      {/* Funnel screens */}
       <Stack.Screen name="landing" component={LandingScreen} />
+      {/* Blog screens */}
+      <Stack.Screen name="blogList" component={BlogListScreen} />
+      {/* Main screens */}
       <Stack.Screen name="list" component={ListScreen} />
       <Stack.Screen name="mason" component={MasonScreen} />
-      <Stack.Screen name="loading" component={LoadingScreen} />
       <Stack.Screen name="detail" component={DetailScreen} />
       {/* Account screens */}
       <Stack.Screen name="signUp" component={SignUpScreen} />

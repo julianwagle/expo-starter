@@ -4,7 +4,6 @@ import { observer } from "mobx-react-lite"
 import { NavigatorParamList } from "../../navigators"
 import { LayoutMain } from '../../layouts'
 import { useStores } from "../../models"
-import { getRange } from '../../utils/range'
 import {
   HStack,
   Heading,
@@ -12,6 +11,8 @@ import {
   Text as NativeText,
 } from 'native-base';
 import { DetailMoreContent } from './detail-more-content'
+import { getItemFromArrOfMaps } from '../../utils/get-item-from-arr-of-maps'
+import { getNextItemsFromArrOfMaps } from '../../utils/get-next-items-from-arr-of-maps'
 
 export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = observer(
   ({ route, navigation }) => {
@@ -26,59 +27,26 @@ export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = 
     const { characterStore } = useStores()
     const { characters } = characterStore
 
-    function getItem(characters: any) {
-      for (let i = 0; i < characters.length; i++) {
-        var characterName = characters[i]['name'];
-        if (characterName == passedName) {
-          const item: any = characters[i] || new Map();
-          return [item, i];
-        }
-      }
-      const item: any = characters[0] || new Map();
-      return [item, 0];
-    }
-    const getItemResp = getItem(characters);
+    const getItemResp = getItemFromArrOfMaps(characters, 'name', passedName);
     const item = getItemResp[0];
     const itemCount = getItemResp[1];
 
+    const itemQuant = 3
+    const nextItemIndexs = getNextItemsFromArrOfMaps(characters, itemCount, itemQuant);
 
-    function getRelatedItems(characters: any, itemCount: number, respQuant: number) {
+    let relatedItems = [];
+    for (let i = 0; i < itemQuant; i++) {
+      var count = nextItemIndexs[i];
 
-      let relatedItems = [];
-      let requests: any[]
+      relatedItems.push(
+        <DetailMoreContent
+          character={characters[count]}
+          navigation={navigation}
+        />
 
-      const startVal: number = itemCount + 1
-      const maxVal: number = characters.length
-      const maxValM1: number = characters.length - 1
-      const endVal: number = itemCount + respQuant
-      if (startVal == maxVal) {
-        requests = getRange(0, respQuant, 1);
-      }
-      else if (endVal >= maxVal) {
-        var backVals = getRange(startVal, maxValM1, 1);
-        var frontValsEnd = endVal - maxValM1;
-        var frontVals = getRange(0, frontValsEnd, 1);
-        requests = [...backVals, ...frontVals];
-      } else {
-        requests = getRange(startVal, endVal, 1);
-      }
+      );
 
-      for (let i = 0; i < respQuant; i++) {
-        var count = requests[i];
-
-        relatedItems.push(
-          <DetailMoreContent
-            character={characters[count]}
-            navigation={navigation}
-          />
-
-        );
-
-      }
-      return relatedItems
     }
-    const respQuant = 3
-    const relatedItems = getRelatedItems(characters, itemCount, respQuant);
 
     useEffect(() => {
       async function fetchData() {
