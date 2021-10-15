@@ -3,21 +3,17 @@ import { observer } from "mobx-react-lite"
 import { StackScreenProps } from "@react-navigation/stack"
 import { NavigatorParamList } from "../../navigators"
 import {
-    Avatar,
     Spacer,
-    HStack,
     FormControl,
     Input,
     TextArea,
     Button,
     Icon as NativeIcon,
     useColorModeValue,
-    Pressable,
     Modal,
     Center
 } from 'native-base';
 import { LayoutMain, LayoutAccount } from '../../layouts';
-import { Icon } from "../../components/icon/icon"
 import { MaterialIcons, Entypo, Ionicons } from '@expo/vector-icons';
 
 export const ContactScreen: FC<StackScreenProps<NavigatorParamList, "contact">> = observer(
@@ -27,10 +23,7 @@ export const ContactScreen: FC<StackScreenProps<NavigatorParamList, "contact">> 
         const goBack = () => navigation.goBack()
         const profileScreen = () => navigation.navigate("profile")
         const listScreen = () => navigation.navigate("list")
-        const changePasswordScreen = () => navigation.navigate("changePassword")
 
-        const [show, setShow] = React.useState(false);
-        const handleClick = () => setShow(!show);
         const [modalVisible, setModalVisible] = React.useState(false);
 
         return (
