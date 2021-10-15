@@ -19,13 +19,20 @@ export const BlogListContent = ({
         <Pressable
             flex={1}
             onPress={() =>
-                navigation.navigate('detail', { id: String(item.id) })}
+                navigation.navigate('blogDetail', { id: String(item.id) })}
         >
 
-            <Box rounded="pill" w="100%" shadow={4} mx={{ base: 'auto', md: 0 }}>
+            <Box
+                w="100%"
+                shadow={8}
+                mb={8}
+                mx={{ base: 'auto', md: 4 }}
+                rounded="xl"
+                overflow="hidden"
+            >
                 <NativeImage
+                    key={item.title}
                     h={64}
-                    roundedTop="pill"
                     source={{ uri: item.image }}
                     alt={item.title}
                 />
@@ -35,9 +42,6 @@ export const BlogListContent = ({
                     </Heading>
                     <NativeText>
                         {item.description}
-                        <NativeText>
-                            more
-                        </NativeText>
                     </NativeText>
                 </Stack>
             </Box>

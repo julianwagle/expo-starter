@@ -17,6 +17,7 @@ import {
 } from "../screens/main"
 import {
   BlogListScreen,
+  BlogDetailScreen,
 } from "../screens/blog"
 import {
   LandingScreen,
@@ -96,6 +97,7 @@ const AppStack = () => {
       <Stack.Screen name="landing" component={LandingScreen} />
       {/* Blog screens */}
       <Stack.Screen name="blogList" component={BlogListScreen} />
+      <Stack.Screen name="blogDetail" component={BlogDetailScreen} />
       {/* Main screens */}
       <Stack.Screen name="list" component={ListScreen} />
       <Stack.Screen name="mason" component={MasonScreen} />
