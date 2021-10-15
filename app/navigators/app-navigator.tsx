@@ -21,6 +21,7 @@ import {
 } from "../screens/blog"
 import {
   LandingScreen,
+  ContactScreen,
 } from "../screens/funnel"
 import {
   SignUpScreen,
@@ -95,6 +96,7 @@ const AppStack = () => {
       <Stack.Screen name="loading" component={LoadingScreen} />
       {/* Funnel screens */}
       <Stack.Screen name="landing" component={LandingScreen} />
+      <Stack.Screen name="contact" component={ContactScreen} />
       {/* Blog screens */}
       <Stack.Screen name="blogList" component={BlogListScreen} />
       <Stack.Screen name="blogDetail" component={BlogDetailScreen} />

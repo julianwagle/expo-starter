@@ -67,7 +67,17 @@ export const EditProfileScreen: FC<StackScreenProps<NavigatorParamList, "editPro
 
                     <FormControl >
                         <FormControl.Label>Username</FormControl.Label>
-                        <Input placeholder="Username" placeholderTextColor={useColorModeValue('blueGray.400', 'blueGray.50')} />
+                        <Input
+                            InputLeftElement={
+                                <NativeIcon
+                                    as={<Ionicons name="person" />}
+                                    size="md"
+                                    m={2}
+                                    color={useColorModeValue('black', 'gray.300')}
+                                />
+                            }
+                            placeholder="Username" />
+
                         <FormControl.ErrorMessage>Something is wrong.</FormControl.ErrorMessage>
                     </FormControl>
 

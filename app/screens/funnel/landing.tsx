@@ -10,7 +10,9 @@ export const LandingScreen: FC<StackScreenProps<NavigatorParamList, "landing">> 
 
     const loadingScreen = () => navigation.navigate("loading")
     const landingScreen = () => navigation.navigate("landing")
-    const blogScreen = () => navigation.navigate("blogList")
+    const contactScreen = () => navigation.navigate("contact")
+    const blogListScreen = () => navigation.navigate("blogList")
+    const blogDetailScreen = () => navigation.navigate("blogDetail")
     const listScreen = () => navigation.navigate("list")
     const masonScreen = () => navigation.navigate("mason")
     const detailScreen = () => navigation.navigate("detail")
@@ -54,13 +56,25 @@ export const LandingScreen: FC<StackScreenProps<NavigatorParamList, "landing">> 
               size="lg"
               variant="outline"
               onPress={landingScreen}>
-              Landing</Button></Box>
+              Landing (Here) </Button></Box>
 
             <Box><Button
               size="lg"
               variant="outline"
-              onPress={blogScreen}>
-              Blog</Button></Box>
+              onPress={contactScreen}>
+              Contact</Button></Box>
+
+
+            <Box><Button
+              size="lg"
+              variant="outline"
+              onPress={blogListScreen}>
+              Blog List</Button></Box>
+            <Box><Button
+              size="lg"
+              variant="outline"
+              onPress={blogDetailScreen}>
+              Blog Detail </Button></Box>
 
             <Box><Button
               size="lg"
