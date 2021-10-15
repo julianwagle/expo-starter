@@ -1,16 +1,16 @@
 import React, { FC } from "react"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
-import { NavigatorParamList } from "../../navigators"
-import { LayoutMain } from '../../layouts'
+import { NavigatorParamList } from "../../../navigators"
+import { LayoutMain } from '../../../layouts'
 import {
   HStack,
   Heading,
 } from 'native-base';
-import { mapping } from './blog-list-map';
+import { mapping } from '../blog-map';
 import { BlogDetailMoreContent } from './blog-detail-more-content'
-import { getItemFromArrOfMaps } from '../../utils/get-item-from-arr-of-maps'
-import { getNextItemsFromArrOfMaps } from '../../utils/get-next-items-from-arr-of-maps'
+import { getItemFromArrOfMaps } from '../../../utils/get-item-from-arr-of-maps'
+import { getNextItemsFromArrOfMaps } from '../../../utils/get-next-items-from-arr-of-maps'
 
 
 export const BlogDetailScreen: FC<StackScreenProps<NavigatorParamList, "blogDetail">> = observer(

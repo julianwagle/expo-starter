@@ -2,11 +2,11 @@ import React, { FC } from "react"
 import { FlatList, ViewStyle } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
-import { spacing } from "../../theme"
-import { NavigatorParamList } from "../../navigators"
-import { LayoutMain } from '../../layouts'
+import { spacing } from "../../../theme"
+import { NavigatorParamList } from "../../../navigators"
+import { LayoutMain } from '../../../layouts'
 import { BlogListContent } from './blog-list-content'
-import { mapping } from './blog-list-map';
+import { mapping } from '../blog-map';
 
 const FLAT_LIST: ViewStyle = {
     paddingHorizontal: spacing[4],

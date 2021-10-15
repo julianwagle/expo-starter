@@ -2,9 +2,9 @@ import React, { useEffect, FC } from "react"
 import { ScrollView } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
-import { useStores } from "../../models"
-import { NavigatorParamList } from "../../navigators"
-import { LayoutMain, LayoutMason } from '../../layouts';
+import { useStores } from "../../../models"
+import { NavigatorParamList } from "../../../navigators"
+import { LayoutMain, LayoutMason } from '../../../layouts';
 import {
   useBreakpointValue,
 } from 'native-base';

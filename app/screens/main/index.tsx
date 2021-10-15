@@ -1,4 +1,4 @@
-export * from "./list"
-export * from "./mason"
-export * from "./detail"
+export * from "./list/list"
+export * from "./mason/mason"
+export * from "./detail/detail"
 export * from "./loading"

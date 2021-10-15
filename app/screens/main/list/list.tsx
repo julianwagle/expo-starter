@@ -2,10 +2,10 @@ import React, { useEffect, FC } from "react"
 import { FlatList, ViewStyle } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
-import { spacing } from "../../theme"
-import { useStores } from "../../models"
-import { NavigatorParamList } from "../../navigators"
-import { LayoutMain } from '../../layouts'
+import { spacing } from "../../../theme"
+import { useStores } from "../../../models"
+import { NavigatorParamList } from "../../../navigators"
+import { LayoutMain } from '../../../layouts'
 import { ListContent } from './list-content'
 
 const FLAT_LIST: ViewStyle = {

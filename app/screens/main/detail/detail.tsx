@@ -1,9 +1,9 @@
 import React, { useEffect, FC } from "react"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
-import { NavigatorParamList } from "../../navigators"
-import { LayoutMain } from '../../layouts'
-import { useStores } from "../../models"
+import { NavigatorParamList } from "../../../navigators"
+import { LayoutMain } from '../../../layouts'
+import { useStores } from "../../../models"
 import {
   HStack,
   Heading,
@@ -11,8 +11,8 @@ import {
   Text as NativeText,
 } from 'native-base';
 import { DetailMoreContent } from './detail-more-content'
-import { getItemFromArrOfMaps } from '../../utils/get-item-from-arr-of-maps'
-import { getNextItemsFromArrOfMaps } from '../../utils/get-next-items-from-arr-of-maps'
+import { getItemFromArrOfMaps } from '../../../utils/get-item-from-arr-of-maps'
+import { getNextItemsFromArrOfMaps } from '../../../utils/get-next-items-from-arr-of-maps'
 
 export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = observer(
   ({ route, navigation }) => {
