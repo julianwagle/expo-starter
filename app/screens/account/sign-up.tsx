@@ -12,7 +12,7 @@ import {
   VStack,
   useColorModeValue,
 } from 'native-base';
-import { LayoutMain, LayoutAccount } from '../../layouts';
+import { LayoutMain, LayoutForm } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
 import { MaterialIcons, Entypo, Ionicons } from '@expo/vector-icons';
 
@@ -46,7 +46,7 @@ export const SignUpScreen: FC<StackScreenProps<NavigatorParamList, "signUp">> = 
 
       >
 
-        <LayoutAccount
+        <LayoutForm
           headerTx='signUpScreen.title'
         >
 
@@ -144,7 +144,7 @@ export const SignUpScreen: FC<StackScreenProps<NavigatorParamList, "signUp">> = 
             <Text isTruncated alignSelf={{ base: 'center', md: 'flex-start' }} onPress={logInScreen}>Already have an account? </Text>
           </FormControl>
 
-        </LayoutAccount>
+        </LayoutForm>
 
       </LayoutMain>
 

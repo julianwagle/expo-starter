@@ -11,7 +11,7 @@ import {
   Icon as NativeIcon,
   useColorModeValue
 } from 'native-base';
-import { LayoutMain, LayoutAccount } from '../../layouts';
+import { LayoutMain, LayoutForm } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
 import { Entypo } from '@expo/vector-icons';
 
@@ -40,7 +40,7 @@ export const LogInScreen: FC<StackScreenProps<NavigatorParamList, "logIn">> = ob
         preset="scroll"
 
       >
-        <LayoutAccount
+        <LayoutForm
           headerTx='logInScreen.title'
         >
 
@@ -94,7 +94,7 @@ export const LogInScreen: FC<StackScreenProps<NavigatorParamList, "logIn">> = ob
 
           <Text isTruncated alignSelf={{ base: 'center', md: 'flex-start' }} onPress={resetPasswordScreen} >Forgot your password?</Text>
 
-        </LayoutAccount>
+        </LayoutForm>
 
       </LayoutMain>
 

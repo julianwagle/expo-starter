@@ -16,7 +16,7 @@ import {
     Modal,
     Center
 } from 'native-base';
-import { LayoutMain, LayoutAccount } from '../../layouts';
+import { LayoutMain, LayoutForm } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
 import { MaterialIcons, Entypo, Ionicons } from '@expo/vector-icons';
 
@@ -45,7 +45,7 @@ export const EditProfileScreen: FC<StackScreenProps<NavigatorParamList, "editPro
                 preset="scroll"
             >
 
-                <LayoutAccount
+                <LayoutForm
                     headerTx='editProfileScreen.title'
                 >
                     <Pressable
@@ -192,7 +192,7 @@ export const EditProfileScreen: FC<StackScreenProps<NavigatorParamList, "editPro
                         </Modal.Content>
                     </Modal>
 
-                </LayoutAccount>
+                </LayoutForm>
 
             </LayoutMain>
 

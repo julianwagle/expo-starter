@@ -7,7 +7,7 @@ import {
     Text,
     Heading,
 } from 'native-base';
-import { LayoutMain, LayoutAccount } from '../../layouts';
+import { LayoutMain, LayoutForm } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
 
 export const TermsScreen: FC<StackScreenProps<NavigatorParamList, "terms">> = observer(
@@ -30,7 +30,7 @@ export const TermsScreen: FC<StackScreenProps<NavigatorParamList, "terms">> = ob
 
             >
 
-                <LayoutAccount
+                <LayoutForm
                     headerTx='termsScreen.title'
                 >
 
@@ -99,7 +99,7 @@ export const TermsScreen: FC<StackScreenProps<NavigatorParamList, "terms">> = ob
 
                     </Box>
 
-                </LayoutAccount>
+                </LayoutForm>
 
             </LayoutMain>
 

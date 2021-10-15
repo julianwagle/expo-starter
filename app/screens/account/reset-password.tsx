@@ -13,7 +13,7 @@ import {
   Icon as NativeIcon,
   useColorModeValue
 } from 'native-base';
-import { LayoutMain, LayoutAccount } from '../../layouts';
+import { LayoutMain, LayoutForm } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
 import { Entypo } from '@expo/vector-icons';
 
@@ -42,7 +42,7 @@ export const ResetPasswordScreen: FC<StackScreenProps<NavigatorParamList, "reset
 
       >
 
-        <LayoutAccount
+        <LayoutForm
           headerTx='resetPasswordScreen.title'
         >
 
@@ -122,7 +122,7 @@ export const ResetPasswordScreen: FC<StackScreenProps<NavigatorParamList, "reset
           </FormControl>
 
           <Spacer />
-        </LayoutAccount>
+        </LayoutForm>
 
       </LayoutMain>
 

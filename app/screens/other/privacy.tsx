@@ -7,7 +7,7 @@ import {
     Text,
     Heading,
 } from 'native-base';
-import { LayoutMain, LayoutAccount } from '../../layouts';
+import { LayoutMain, LayoutForm } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
 
 export const PrivacyScreen: FC<StackScreenProps<NavigatorParamList, "privacy">> = observer(
@@ -30,7 +30,7 @@ export const PrivacyScreen: FC<StackScreenProps<NavigatorParamList, "privacy">> 
 
             >
 
-                <LayoutAccount
+                <LayoutForm
                     headerTx='privacyScreen.title'
                 >
 
@@ -99,7 +99,7 @@ export const PrivacyScreen: FC<StackScreenProps<NavigatorParamList, "privacy">> 
 
                     </Box>
 
-                </LayoutAccount>
+                </LayoutForm>
 
             </LayoutMain>
 

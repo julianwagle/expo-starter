@@ -13,7 +13,7 @@ import {
     Modal,
     Center
 } from 'native-base';
-import { LayoutMain, LayoutAccount } from '../../layouts';
+import { LayoutMain, LayoutForm } from '../../layouts';
 import { MaterialIcons, Entypo, Ionicons } from '@expo/vector-icons';
 
 export const ContactScreen: FC<StackScreenProps<NavigatorParamList, "contact">> = observer(
@@ -38,7 +38,7 @@ export const ContactScreen: FC<StackScreenProps<NavigatorParamList, "contact">> 
                 preset="scroll"
             >
 
-                <LayoutAccount
+                <LayoutForm
                     headerTx='contactScreen.title'
                 >
 
@@ -156,7 +156,7 @@ export const ContactScreen: FC<StackScreenProps<NavigatorParamList, "contact">> 
                         </Modal.Content>
                     </Modal>
 
-                </LayoutAccount>
+                </LayoutForm>
 
             </LayoutMain>
 

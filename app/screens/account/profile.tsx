@@ -13,7 +13,7 @@ import {
     Avatar,
     useColorModeValue,
 } from 'native-base';
-import { LayoutMain, LayoutAccount } from '../../layouts';
+import { LayoutMain, LayoutForm } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
 import { FontAwesome5, MaterialIcons, Entypo } from '@expo/vector-icons';
 
@@ -42,7 +42,7 @@ export const ProfileScreen: FC<StackScreenProps<NavigatorParamList, "profile">> 
 
             >
 
-                <LayoutAccount
+                <LayoutForm
                     headerTx='profileScreen.title'
                 >
                     <Avatar
@@ -159,7 +159,7 @@ export const ProfileScreen: FC<StackScreenProps<NavigatorParamList, "profile">> 
 
                     </HStack>
 
-                </LayoutAccount>
+                </LayoutForm>
 
             </LayoutMain>
 

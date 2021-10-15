@@ -9,7 +9,7 @@ import {
   Button,
   useColorModeValue
 } from 'native-base';
-import { LayoutMain, LayoutAccount } from '../../layouts';
+import { LayoutMain, LayoutForm } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
 import { Entypo } from '@expo/vector-icons';
 
@@ -35,7 +35,7 @@ export const ChangePasswordScreen: FC<StackScreenProps<NavigatorParamList, "chan
         preset="scroll"
       >
 
-        <LayoutAccount
+        <LayoutForm
           headerTx='changePasswordScreen.title'
         >
 
@@ -70,7 +70,7 @@ export const ChangePasswordScreen: FC<StackScreenProps<NavigatorParamList, "chan
 
           <Spacer />
 
-        </LayoutAccount>
+        </LayoutForm>
 
       </LayoutMain>
 

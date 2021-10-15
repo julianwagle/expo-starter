@@ -7,7 +7,7 @@ import {
     Text,
     Heading,
 } from 'native-base';
-import { LayoutMain, LayoutAccount } from '../../layouts';
+import { LayoutMain, LayoutForm } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
 
 export const CookiesScreen: FC<StackScreenProps<NavigatorParamList, "cookies">> = observer(
@@ -30,7 +30,7 @@ export const CookiesScreen: FC<StackScreenProps<NavigatorParamList, "cookies">> 
 
             >
 
-                <LayoutAccount
+                <LayoutForm
                     headerTx='cookiesScreen.title'
                 >
 
@@ -99,7 +99,7 @@ export const CookiesScreen: FC<StackScreenProps<NavigatorParamList, "cookies">> 
 
                     </Box>
 
-                </LayoutAccount>
+                </LayoutForm>
 
             </LayoutMain>
 

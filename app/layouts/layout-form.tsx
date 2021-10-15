@@ -9,9 +9,9 @@ import {
     useColorMode,
     Divider,
 } from 'native-base';
-import { translate } from "../i18n/"
+import { translate } from "../i18n"
 
-export const LayoutAccount = ({
+export const LayoutForm = ({
     headerTx,
     children,
 }: any) => {
