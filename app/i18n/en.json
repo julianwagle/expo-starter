@@ -47,6 +47,9 @@
   "paymentScreen": {
     "title": "Payment"
   },
+  "shippingScreen": {
+    "title": "Shipping"
+  },
   "signUpScreen": {
     "title": "Sign Up"
   },

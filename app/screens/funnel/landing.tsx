@@ -12,6 +12,10 @@ export const LandingScreen: FC<StackScreenProps<NavigatorParamList, "landing">> 
     const landingScreen = () => navigation.navigate("landing")
     const contactScreen = () => navigation.navigate("contact")
     const aboutScreen = () => navigation.navigate("about")
+    const pricingScreen = () => navigation.navigate("pricing")
+    const paymentScreen = () => navigation.navigate("payment")
+    const shippingScreen = () => navigation.navigate("shipping")
+    const ordersScreen = () => navigation.navigate("orders")
     const blogListScreen = () => navigation.navigate("blogList")
     const blogDetailScreen = () => navigation.navigate("blogDetail")
     const listScreen = () => navigation.navigate("list")
@@ -71,6 +75,28 @@ export const LandingScreen: FC<StackScreenProps<NavigatorParamList, "landing">> 
               onPress={aboutScreen}>
               About</Button></Box>
 
+            <Box><Button
+              size="lg"
+              variant="outline"
+              onPress={paymentScreen}>
+              Payment</Button></Box>
+
+            <Box><Button
+              size="lg"
+              variant="outline"
+              onPress={pricingScreen}>
+              Pricing</Button></Box>
+
+            <Box><Button
+              size="lg"
+              variant="outline"
+              onPress={shippingScreen}>
+              Shipping</Button></Box>
+            <Box><Button
+              size="lg"
+              variant="outline"
+              onPress={ordersScreen}>
+              Orders</Button></Box>
 
 
             <Box><Button

@@ -12,11 +12,11 @@ import {
     VStack,
     useColorModeValue,
 } from 'native-base';
-import { LayoutMain, LayoutForm } from '../../layouts';
+import { LayoutMain } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
 import { MaterialIcons, Entypo, Ionicons } from '@expo/vector-icons';
 
-export const PaymentScreen: FC<StackScreenProps<NavigatorParamList, "payment">> = observer(
+export const OrdersScreen: FC<StackScreenProps<NavigatorParamList, "orders">> = observer(
 
     ({ navigation }) => {
 
@@ -37,11 +37,6 @@ export const PaymentScreen: FC<StackScreenProps<NavigatorParamList, "payment">> 
 
             >
 
-                <LayoutForm
-                    headerTx='paymentScreen.title'
-                >
-
-                </LayoutForm>
 
             </LayoutMain>
 
