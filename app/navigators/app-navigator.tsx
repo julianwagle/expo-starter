@@ -22,6 +22,7 @@ import {
 import {
   LandingScreen,
   ContactScreen,
+  AboutScreen,
 } from "../screens/funnel"
 import {
   SignUpScreen,
@@ -97,6 +98,7 @@ const AppStack = () => {
       {/* Funnel screens */}
       <Stack.Screen name="landing" component={LandingScreen} />
       <Stack.Screen name="contact" component={ContactScreen} />
+      <Stack.Screen name="about" component={AboutScreen} />
       {/* Blog screens */}
       <Stack.Screen name="blogList" component={BlogListScreen} />
       <Stack.Screen name="blogDetail" component={BlogDetailScreen} />
