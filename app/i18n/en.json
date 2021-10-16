@@ -45,10 +45,10 @@
     "title": "Pricing"
   },
   "paymentScreen": {
-    "title": "Payment"
+    "title": "Payment form"
   },
   "shippingScreen": {
-    "title": "Shipping"
+    "title": "Shipping info"
   },
   "signUpScreen": {
     "title": "Sign Up"
