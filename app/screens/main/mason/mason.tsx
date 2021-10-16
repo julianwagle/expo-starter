@@ -26,7 +26,7 @@ export const MasonScreen: FC<StackScreenProps<NavigatorParamList, "mason">> = ob
       for (let i = 0; i < characters.length; i++) {
         masonItems.push(
           <MasonContent
-            character={characters[i]}
+            item={characters[i]}
             navigation={navigation}
           />
         );

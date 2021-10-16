@@ -18,13 +18,8 @@ export const PricingContent = ({
 }: any) => {
 
     const combos = [
-        [['lightBlue.400', 'cyan.200'], ['lightBlue.600', 'cyan.300']],
-        [['cyan.400', 'teal.200'], ['cyan.600', 'teal.300']],
-        [['orange.400', 'amber.200'], ['orange.600', 'amber.300']],
-        [['blue.800', 'lightBlue.300'], ['blue.900', 'lightBlue.500']],
         [['blue.800', 'lightBlue.300'], ['blue.900', 'lightBlue.500']],
         [['violet.800', 'lightBlue.300'], ['violet.900', 'lightBlue.500']],
-        [['emerald.400', 'lime.200'], ['emerald.600', 'lime.300']],
         [['fuchsia.800', 'pink.300'], ['fuchsia.900', 'pink.500']]
     ]
     var selections = combos[Math.floor(Math.random() * combos.length)]

@@ -40,7 +40,7 @@ export const DetailScreen: FC<StackScreenProps<NavigatorParamList, "detail">> = 
 
       relatedItems.push(
         <DetailMoreContent
-          character={characters[count]}
+          item={characters[count]}
           navigation={navigation}
         />
 

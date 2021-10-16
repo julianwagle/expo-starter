@@ -15,7 +15,6 @@ export const LandingScreen: FC<StackScreenProps<NavigatorParamList, "landing">> 
     const pricingScreen = () => navigation.navigate("pricing")
     const paymentScreen = () => navigation.navigate("payment")
     const shippingScreen = () => navigation.navigate("shipping")
-    const ordersScreen = () => navigation.navigate("orders")
     const blogListScreen = () => navigation.navigate("blogList")
     const blogDetailScreen = () => navigation.navigate("blogDetail")
     const listScreen = () => navigation.navigate("list")
@@ -92,11 +91,6 @@ export const LandingScreen: FC<StackScreenProps<NavigatorParamList, "landing">> 
               variant="outline"
               onPress={shippingScreen}>
               Shipping</Button></Box>
-            <Box><Button
-              size="lg"
-              variant="outline"
-              onPress={ordersScreen}>
-              Orders</Button></Box>
 
 
             <Box><Button

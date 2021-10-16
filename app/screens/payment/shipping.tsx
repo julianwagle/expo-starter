@@ -13,8 +13,7 @@ import {
 } from 'native-base';
 import { LayoutMain, LayoutForm } from '../../layouts';
 import { Icon } from "../../components/icon/icon"
-import { AntDesign } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
+import { AntDesign, Ionicons } from '@expo/vector-icons';
 export const ShippingScreen: FC<StackScreenProps<NavigatorParamList, "shipping">> = observer(
 
     ({ navigation }) => {

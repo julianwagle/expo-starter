@@ -36,7 +36,6 @@ import {
   PaymentScreen,
   PricingScreen,
   ShippingScreen,
-  OrdersScreen
 } from "../screens/payment"
 import {
   TermsScreen,
@@ -86,7 +85,6 @@ export type NavigatorParamList = {
   payment: undefined
   shipping: undefined
   pricing: undefined
-  orders: undefined
 
 }
 
@@ -124,7 +122,6 @@ const AppStack = () => {
       <Stack.Screen name="pricing" component={PricingScreen} />
       <Stack.Screen name="payment" component={PaymentScreen} />
       <Stack.Screen name="shipping" component={ShippingScreen} />
-      <Stack.Screen name="orders" component={OrdersScreen} />
       {/* Other screens */}
       <Stack.Screen name="terms" component={TermsScreen} />
       <Stack.Screen name="privacy" component={PrivacyScreen} />
