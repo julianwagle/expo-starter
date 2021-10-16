@@ -2,14 +2,16 @@ import React from "react"
 import { View, ViewStyle, TextStyle } from "react-native"
 import { spacing } from "../../theme"
 import { translate } from "../../i18n/"
+import { NavMenu } from "../nav-menu/"
 import {
   useColorMode,
   Heading,
   HStack,
-  Pressable,
+  Pressable as NativePressable,
   ArrowBackIcon,
-  Avatar
+  Avatar,
 } from 'native-base';
+
 
 // import { ArrowLeft } from "../icon/icons/arrow-left"
 
@@ -32,7 +34,8 @@ export const Header = ({
   rightIcon,
   onRightPress,
   headerTx,
-  onCenterPress
+  onCenterPress,
+  navigation
 }: any) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const headerText = (headerTx && translate(headerTx)) || "Ignition"
@@ -42,13 +45,16 @@ export const Header = ({
         <HStack alignItems="center" w="100%">
 
           {leftIcon ? (
-            <Pressable onPress={onLeftPress} _web={{ cursor: 'pointer', }} >
+            <NativePressable onPress={onLeftPress} _web={{ cursor: 'pointer', }} >
               <ArrowBackIcon ml={2} />
-            </Pressable>
-          ) : (<View />)}
+            </NativePressable>
+          ) : (
+            <NavMenu
+              navigation={navigation} />
+          )}
 
           <View style={TITLE_VIEW_HOME}>
-            <Pressable onPress={onCenterPress} _web={{ cursor: 'pointer', }} >
+            <NativePressable onPress={onCenterPress} _web={{ cursor: 'pointer', }} >
 
               <Heading
                 color={colorMode == 'dark' ? 'white' : 'gray.800'}
@@ -57,15 +63,15 @@ export const Header = ({
               >
                 {headerText}
               </Heading>
-            </Pressable>
+            </NativePressable>
           </View>
 
           {rightIcon ? (
-            <Pressable onPress={onRightPress} _web={{ cursor: 'pointer', }} >
+            <NativePressable onPress={onRightPress} _web={{ cursor: 'pointer', }} >
               <Avatar source={{ uri: 'https://avatars.githubusercontent.com/u/54553693?s=400&u=2f1b4be04dc9b4e30d39f7fee1af434205fa05c2&v=4', }} >
                 JW
               </Avatar>
-            </Pressable>
+            </NativePressable>
           ) : (
             <View />
           )}

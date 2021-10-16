@@ -57,7 +57,10 @@ export const Root = () => {
     if (!rootStore || !isNavigationStateRestored) return null
 
     // otherwise, we're ready to render the app
+
+
     return (
+
 
         <ToggleStorybook>
             <RootStoreProvider value={rootStore}>
@@ -67,7 +70,9 @@ export const Root = () => {
                         <AppNavigator
                             initialState={initialNavigationState}
                             onStateChange={onNavigationStateChange}
-                        />
+                        >
+
+                        </AppNavigator>
 
                     </ErrorBoundary>
                 </SafeAreaProvider>

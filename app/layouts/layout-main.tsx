@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Box } from 'native-base';
-import { ColorToggler, LogoBackdrop, NavBar } from "../components/constants"
+import { ColorToggler, LogoBackdrop } from "../components/constants"
 import { View, ViewStyle } from "react-native"
 import { Header, Screen } from "../components"
 import { color } from "../theme"
@@ -16,6 +16,7 @@ export const LayoutMain = ({
     onCenterPress,
     children,
     navigation,
+    navigation_,
     preset
 }: any) => {
 
@@ -47,6 +48,7 @@ export const LayoutMain = ({
                         onRightPress={onRightPress}
                         headerTx={headerTx}
                         onCenterPress={onCenterPress}
+                        navigation={navigation_}
                     />
 
 
@@ -60,7 +62,6 @@ export const LayoutMain = ({
 
                 <LogoBackdrop />
 
-                <NavBar />
 
             </Screen>
 

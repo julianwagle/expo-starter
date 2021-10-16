@@ -58,7 +58,6 @@ import { useColorModeValue, useToken } from 'native-base';
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
 export type NavigatorParamList = {
-  loading: undefined
   // Funnel params
   landing: undefined
   about: undefined
@@ -77,14 +76,16 @@ export type NavigatorParamList = {
   editProfile: undefined
   resetPassword: undefined
   changePassword: undefined
-  // Other params
-  terms: undefined
-  privacy: undefined
-  cookies: undefined
   // Payment params
   payment: undefined
   shipping: undefined
   pricing: undefined
+  // Other params
+  terms: undefined
+  privacy: undefined
+  cookies: undefined
+  loading: undefined
+
 
 }
 
