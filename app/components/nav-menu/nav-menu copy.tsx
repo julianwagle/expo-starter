@@ -48,7 +48,6 @@ export const NavMenu = ({
     return (
         <Menu
             // backgroundColor={'amber.100'}
-            w={'150%'}
             closeOnSelect={true}
             trigger={(triggerProps) => {
                 return (
@@ -62,7 +61,7 @@ export const NavMenu = ({
 
             <Menu.Group title="MAIN">
                 {/* <Menu.Item key={'0'}onPress={landingScreen} >landing</Menu.Item> */}
-                <Menu.Item key={'1'} onPress={aboutScreen} >About us</Menu.Item>
+                <Menu.Item key={'1'} onPress={aboutScreen} >About</Menu.Item>
                 <Menu.Item key={'2'} onPress={contactScreen} >Contact us</Menu.Item>
                 {/* </Menu.Group>
 
@@ -86,18 +85,18 @@ export const NavMenu = ({
             <Menu.Group title="ACCOUNT">
                 <Menu.Item key={'11'} onPress={signUpScreen} >Sign Up</Menu.Item>
                 <Menu.Item key={'12'} onPress={logInScreen} >Log In</Menu.Item>
-                <Menu.Item key={'13'} onPress={profileScreen} >View Profile</Menu.Item>
-                {/* <Menu.Item key={'14'} onPress={editProfileScreen} >editProfile</Menu.Item>
-                <Menu.Item key={'15'} onPress={resetPasswordScreen} >resetPassword</Menu.Item>
-                <Menu.Item key={'16'} onPress={changePasswordScreen} >changePassword</Menu.Item> */}
+                <Menu.Item key={'13'} onPress={profileScreen} >Profile</Menu.Item>
+                {/* <Menu.Item key={'14'}onPress={editProfileScreen} >editProfile</Menu.Item>
+                <Menu.Item key={'15'}onPress={resetPasswordScreen} >resetPassword</Menu.Item>
+                <Menu.Item key={'16'}onPress={changePasswordScreen} >changePassword</Menu.Item> */}
             </Menu.Group>
 
             <Divider borderColor="#f0f" />
 
             <Menu.Group title="OTHER">
-                <Menu.Item key={'17'} onPress={termsScreen} >Terms of Service</Menu.Item>
-                <Menu.Item key={'18'} onPress={privacyScreen} >Privacy Policy</Menu.Item>
-                <Menu.Item key={'19'} onPress={cookiesScreen} >Cookies Policy</Menu.Item>
+                <Menu.Item key={'17'} onPress={termsScreen} >Terms</Menu.Item>
+                <Menu.Item key={'18'} onPress={privacyScreen} >Privacy</Menu.Item>
+                <Menu.Item key={'19'} onPress={cookiesScreen} >Cookies</Menu.Item>
                 {/* <Menu.Item key={'20'}onPress={loadingScreen} >loading</Menu.Item> */}
             </Menu.Group>
 

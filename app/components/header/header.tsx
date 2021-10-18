@@ -10,6 +10,7 @@ import {
   Pressable as NativePressable,
   ArrowBackIcon,
   Avatar,
+  HamburgerIcon
 } from 'native-base';
 
 
@@ -49,8 +50,12 @@ export const Header = ({
               <ArrowBackIcon ml={2} />
             </NativePressable>
           ) : (
+            // <NativePressable onPress={onLeftPress} _web={{ cursor: 'pointer', }} >
+            //   <HamburgerIcon ml={2} />
+            // </NativePressable>
             <NavMenu
-              navigation={navigation} />
+              navigation={navigation}
+            />
           )}
 
           <View style={TITLE_VIEW_HOME}>
@@ -68,7 +73,10 @@ export const Header = ({
 
           {rightIcon ? (
             <NativePressable onPress={onRightPress} _web={{ cursor: 'pointer', }} >
-              <Avatar source={{ uri: 'https://avatars.githubusercontent.com/u/54553693?s=400&u=2f1b4be04dc9b4e30d39f7fee1af434205fa05c2&v=4', }} >
+              <Avatar
+                source={{
+                  uri: 'https://avatars.githubusercontent.com/u/54553693?s=400&u=2f1b4be04dc9b4e30d39f7fee1af434205fa05c2&v=4',
+                }} >
                 JW
               </Avatar>
             </NativePressable>
